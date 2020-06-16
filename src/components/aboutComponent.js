@@ -1,7 +1,7 @@
 import React from 'react';
 import { Breadcrumb, BreadcrumbItem, Card, CardBody, CardHeader, Media } from 'reactstrap';
 import { Link } from 'react-router-dom';
-import { baseUrl } from '../shared/baseUrl'
+
 import { Loading } from './LoadingComponent';
 import { Fade, Stagger } from 'react-animation-components';
 
@@ -23,7 +23,7 @@ function RenderLeader({leaders, isLoading, errmess}){
             <Fade in>
                 <Media tag="li">
                 <Media left middle>
-                    <Media object src={baseUrl + leaders.image} alt={leaders.name} />
+                    <Media object src={`/assets/${leaders.image}`} alt={leaders.name} hight='200%'/>
                 </Media>
                 <Media body className="ml-5">
                 <Media heading>{leaders.name}</Media>
